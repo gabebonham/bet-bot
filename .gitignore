@@ -1,0 +1,6 @@
+./matches.csv
+./odds.csv
+./data.json
+__pycache__/
+./myenv/
+./requests/
