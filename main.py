@@ -134,7 +134,7 @@ for liga_key, liga_data in response.items():
             matches[match_id] = match_data
 
 
-csv_file = "tabela.csv"
+csv_file = "tabela_"+datetime.now().strftime("%d-%m-%Y_%H-%M-%S")+".csv"
 if os.path.exists(csv_file):
     os.remove(csv_file)
     print(f" Arquivo anterior '{csv_file}' deletado.")

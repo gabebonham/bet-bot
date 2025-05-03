@@ -12,7 +12,7 @@ def getData():
    
     driver = webdriver.Chrome()
     driver.get(baseUrl)
-    api_base_url = "https://api.thtips.com.br/api/futebolvirtual?liga={liga}&futuro=false&Horas=Horas12&tipoOdd=&dadosAlteracao=&filtros=ftc,fte,ftv,ftc,fte&confrontos=false&hrsConfrontos=240"
+    api_base_url = "https://api.thtips.com.br/api/futebolvirtual?liga={liga}&futuro=false&Horas=Horas6&tipoOdd=&dadosAlteracao=&filtros=ftc,fte,ftv,ftc,fte&confrontos=false&hrsConfrontos=240"
 
     def getToken():
         getTokenFun = f"""
@@ -69,7 +69,7 @@ def getData():
 
  
     all_data = {}
-    for liga in range(6):  
+    for liga in range(1,6):  
         print(f"Fetching data for liga={liga}...")
         data = fetchData(liga)
         all_data[f"liga_{liga}"] = data
